@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Steven Ngo's Portfolio</title>
         <link rel="stylesheet" href="styles.css">
+        <style>
+            img {
+                border: 1px solid black;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>Steven Ngo's Portfolio</h1>
+            <hr>
             <h2>About</h2>
             <nav>
                 <ul>
@@ -21,9 +27,14 @@
             </nav>
         </header>
         <main>
+            <picture>
+                <img src="imageofme.jpg" alt="Picture of myself" width="150" height="200">
+            </picture>
             <p>I am a fourth year computer science major at UC San Diego. As an aspiring software engineer, I am always eager to learn and improve my skills.</p>
+            <aside>
             <p>Some fun facts about me:</p>
             <ul>
+                <li>My favorite color is <span>blue</span>.</li>
                 <li>I like to play video games in my free time!</li>
                 <li>My top 3 favorite foods: <ol>
                     <li><em>Chicken</em> alfredo</li>
@@ -31,6 +42,7 @@
                     <li><em>Chicken</em> parmesan (see anything in common?)</li>
                 </ol></li>
             </ul>
+            </aside>
         </main>
     </body>
 </html>
