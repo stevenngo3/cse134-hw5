@@ -27,7 +27,16 @@
                 <p>Email: stevenngo306@gmail.com</p>
                 <p>Phone: 111-111-1111</p>
             </address>
-            <script>//placeholder</script>
+            <hello-world></hello-world>
+            <script>
+                class HelloWorld extends HTMLElement {
+                    constructor() {
+                        super();
+                        console.log("Hello world!");
+                    }
+                }
+                customElements.define('hello-world', HelloWorld);
+            </script>
             <noscript>Unfortunately the script does not work</noscript>
         </main>
     </body>
