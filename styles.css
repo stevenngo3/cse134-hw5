@@ -1,8 +1,62 @@
-body {
-    background-color: #A9D2D5;
-    font-family: 'Montserrat', Arial, sans-serif;
+:root {
+    --body-bg-color: #A9D2D5;
+    --header-bg-color: rgb(14, 14, 14);
+    --header-title-color: #87C0C4;
 }
 
-#main-header {
-    background-color:aqua;
+body {
+    background-color: var(--body-color,#A9D2D5);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--header-bg-color, rgb(14, 14, 14));
+    margin:0;
+}
+
+.header-title {
+    color: var(--header-title-color, #87C0C4);
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration:none;
+}
+
+nav ul li a:hover {
+    color:rgb(219, 219, 219);
+}
+
+main {
+    padding:40px;
+}
+
+#subheader {
+    margin-left: 200px;
+    margin-bottom: 60px;
+    font-size: 2rem;
 }
