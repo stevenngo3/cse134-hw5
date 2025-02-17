@@ -1,1 +1,8 @@
-/*NOT USED FOR NOW
+body {
+    background-color: #A9D2D5;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#main-header {
+    background-color:aqua;
+}
