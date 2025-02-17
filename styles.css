@@ -7,6 +7,7 @@
     --mixed-color: color-mix(in srgb, blue 80%, black 20%);
 }
 
+@media (min-width: 1024px) {
 @keyframes headertitleani {
     0% {
         transform: translateX(-90px); 
@@ -116,4 +117,5 @@ span {
 #selfie {
     float:right;
     margin-right:100px;
+}
 }
