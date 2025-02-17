@@ -2,6 +2,24 @@
     --body-bg-color: #A9D2D5;
     --header-bg-color: rgb(14, 14, 14);
     --header-title-color: #87C0C4;
+    --header-font-size: 1.1em;
+    --hover-color: color(display-p3 0.77 0.77 0.77);
+    --mixed-color: color-mix(in srgb, blue 80%, black 20%);
+}
+
+@keyframes headertitleani {
+    0% {
+        transform: translateX(-90px); 
+        color: rgb(0, 255, 255);
+    }
+    50% {
+        transform: translateX(0);
+        color: rgb(240, 240, 13); 
+    }
+    100% {
+        transform: translateX(100px); 
+        color: #87C0C4; 
+    }
 }
 
 body {
@@ -10,6 +28,7 @@ body {
     font-size: 20px;
     margin: 0;
     padding: 0;
+    min-height: 100dvh;
 }
 
 header {
@@ -23,6 +42,8 @@ header {
 
 .header-title {
     color: var(--header-title-color, #87C0C4);
+    animation: headertitleani 2s ease-in-out forwards;
+    font-size: var(--header-font-size, 1.1em);
 }
 
 nav {
@@ -45,18 +66,54 @@ nav ul li a {
     text-align: center;
     padding: 14px 20px;
     text-decoration:none;
+    font-size: var(--header-font-size, 1.1em);
+    transition: color 0.5s ease;
 }
 
 nav ul li a:hover {
-    color:rgb(219, 219, 219);
+    color: var(--hover-color, color(display-p3 0.77 0.77 0.77));
+}
+
+header:has(.header-title:hover) {
+    background-color: #12191a;
 }
 
 main {
     padding:40px;
+    min-height: 20dvh;
 }
 
 #subheader {
     margin-left: 200px;
     margin-bottom: 60px;
     font-size: 2rem;
+}
+
+span {
+    color: var(--mixed-color, blue);
+}
+
+#mathzoos-img {
+    margin-bottom: -80px; 
+    margin-top: -80px;
+}
+
+.thanksimg {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+  }
+
+#hello-image {
+    position: absolute;
+    right: 900px; 
+    top: 30%; 
+    transform: translateY(-50%); 
+    height: auto;
+}
+
+#selfie {
+    float:right;
+    margin-right:100px;
 }
