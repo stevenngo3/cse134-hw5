@@ -28,17 +28,18 @@
             <p>If you have any questions or are interested in working together, send your details here!</p>
         </main>
         <footer>
-            <form>
+            <form action="httpbin.org/post" method="POST">
                 <fieldset>
                     <legend>Contact</legend>
                     <label for="fname">Name:</label><br>
-                    <input type="text" id="fname" name="fname" value="Name"><br>
+                    <input type="text" id="fname" name="fname" placeholder="Name"><br>
                     <br>
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" value = "Email"><br>
+                    <input type="email" id="email" name="email" placeholder = "Email"><br>
                     <br>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message">Message</textarea><br>
+                    <label for="message">Comments:</label><br>
+                    <textarea id="message" name="message" placeholder ="Comments"></textarea><br>
+                    <input type="hidden" name="possible_bot" value="true">
                     <button type="button">Submit</button>
                     <template>
                         <p>Submitted</p><br>
