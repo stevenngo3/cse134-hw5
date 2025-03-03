@@ -5,6 +5,8 @@
     --header-font-size: 1.1em;
     --hover-color: color(display-p3 0.77 0.77 0.77);
     --mixed-color: color-mix(in srgb, blue 80%, black 20%);
+    --theme-bg: black;
+    --theme-text-color: white;
 }
 
 @keyframes headertitleani {
@@ -138,9 +140,11 @@ span {
 
 #contactform button {
     padding:10px;
-    background-color: #000000;
-    color: white;
+    background-color: var(--theme-text-color);
+    color: var(--theme-bg);
     border:none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 #contactform input::placeholder,
@@ -151,4 +155,31 @@ span {
 #error-message {
     color:red;
 }
+
+#themebutton {
+    border: none;
+    background-color: var(--theme-bg);
+    color: var(--theme-text-color);
+    cursor: pointer;
+    padding: 10px 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+[data-theme="dark"] {
+    --theme-bg: black;
+    --theme-text-color: white;
+}
+
+[data-theme="light"] {
+    --theme-bg: white;
+    --theme-text-color: black;
+}
+
+body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+
 

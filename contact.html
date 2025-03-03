@@ -17,6 +17,7 @@
             }
         </style>
         <script src="script.js"></script>
+        <script src="theme.js"></script>
     </head>
     <body>
         <header>
@@ -31,6 +32,7 @@
                     <li><a href="experiments.html">Experiments</a></li>
                 </ul>
             </nav>
+            <button id="themebutton">Dark Mode 🌙</button>
         </header>
         <main>
             <h2 id="subheader">Contact</h2>
@@ -49,7 +51,7 @@
                     <label for="comment">Comments (required)</label>
                     <textarea id="comment" name="comment" placeholder ="Comments" required minlength="10" maxlength="100"></textarea>
                     <input type="hidden" name="possible_bot" value="true">
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="formsubmit">Submit</button>
                     <output id="error-message"></output>
                     <output id="info-message"></output>
                 </fieldset>
@@ -58,5 +60,13 @@
         <div class="thanksimg">
         <img src="thankyou.png" alt="Picture saying thank you">
         </div>
+        <noscript>
+            <style>
+                #themebutton {
+                    display: none;
+                }
+            </style>
+            <p style="color:red; text-align: center">Theme switcher requires JavaScript.</p>
+        </noscript>
     </body>
 </html>
