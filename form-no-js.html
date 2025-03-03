@@ -16,7 +16,6 @@
                 border: 2px solid rgb(3, 189, 3);
             }
         </style>
-        <script src="script.js"></script>
     </head>
     <body>
         <header>
@@ -46,12 +45,15 @@
                     <label for="email">Email (required)</label>
                     <input type="email" id="email" name="email" placeholder = "Email" required>
                     
-                    <label for="comment">Comments (required)</label>
-                    <textarea id="comment" name="comment" placeholder ="Comments" required minlength="10" maxlength="100"></textarea>
+                    <label for="message">Comments (required)</label>
+                    <textarea id="message" name="message" placeholder ="Comments" required minlength="10" maxlength="100"></textarea>
                     <input type="hidden" name="possible_bot" value="true">
                     <button type="submit">Submit</button>
                     <output id="error-message"></output>
                     <output id="info-message"></output>
+                    <template>
+                        <p>Submitted</p><br>
+                    </template>
                 </fieldset>
             </form>
         </footer>

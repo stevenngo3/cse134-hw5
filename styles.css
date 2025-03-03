@@ -7,7 +7,6 @@
     --mixed-color: color-mix(in srgb, blue 80%, black 20%);
 }
 
-@media (min-width: 1024px) {
 @keyframes headertitleani {
     0% {
         transform: translateX(-90px); 
@@ -118,4 +117,38 @@ span {
     float:right;
     margin-right:100px;
 }
+
+#contactform fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width:500px;
+    margin:0 auto;
 }
+
+#contactform input {
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+
+#contactform textarea {
+    padding-bottom:20px;
+    padding-top:5px;
+}
+
+#contactform button {
+    padding:10px;
+    background-color: #000000;
+    color: white;
+    border:none;
+}
+
+#contactform input::placeholder,
+#contactform textarea::placeholder {
+    font-family:Arial, sans-serif;
+}
+
+#error-message {
+    color:red;
+}
+
