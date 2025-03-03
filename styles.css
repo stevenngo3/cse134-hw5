@@ -11,7 +11,7 @@
 
 @keyframes headertitleani {
     0% {
-        transform: translateX(-90px); 
+        transform: translateX(-50px); 
         color: rgb(0, 255, 255);
     }
     50% {
@@ -19,7 +19,7 @@
         color: rgb(240, 240, 13); 
     }
     100% {
-        transform: translateX(100px); 
+        transform: translateX(40px); 
         color: #87C0C4; 
     }
 }
