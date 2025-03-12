@@ -26,11 +26,12 @@ class ProjectCard extends HTMLElement {
             border-radius: 8px; 
             padding: 16px;
             margin: 10px;
-            background-color: var(--card-bg-color, #ffffff);
+            background-color: var(--theme-bg);
+            box-shadow: 10px 5px 5px var(--theme-text-color);
             }
 
         h2 {
-            color: black;
+            color: var(--theme-text-color);
             margin: 0 0 8px;
             font-size: 1.5em;
             }
@@ -42,7 +43,7 @@ class ProjectCard extends HTMLElement {
 
         p {
             margin: 8px 0;
-            color: black;
+            color: var(--theme-text-color);
             }
 
         a {
