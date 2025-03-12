@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     remoteButton.addEventListener("click", (event) => {
-        fetch("https://raw.githubusercontent.com/stevenngo3/cse134-hw5/main/projects.json")
+        fetch("https://my-json-server.typicode.com/stevenngo3/cse134-hw5/projects")
         .then((response) => response.json())
         .then((data) => {
             localStorage.setItem("projectData", JSON.stringify(data));
