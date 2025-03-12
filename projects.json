@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Work Journal",
+        "imageUrl": "workjournal.PNG",
+        "description": "Javascript, HTML, CSS",
+        "hyperlink": "https://cse110-sp24-group28.github.io/cse110-sp24-group28-final-project/",
+        "linkText": "Link to the project"
+    },
+    {
+        "title": "File Compression Tool",
+        "imageUrl": "huffmanprogram.PNG",
+        "description": "C++",
+        "hyperlink": "https://en.wikipedia.org/wiki/Huffman_coding",
+        "linkText": "Learn more about Huffman coding"
+    }
+]

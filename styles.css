@@ -7,6 +7,9 @@
     --mixed-color: color-mix(in srgb, blue 80%, black 20%);
     --theme-bg: black;
     --theme-text-color: white;
+    --card-bg-color: #ffffff;
+    --card-border: #d3d3d3;
+    --card-link-color: rgb(0, 81, 255);
 }
 
 @keyframes headertitleani {
@@ -180,6 +183,13 @@ body {
     background-color: var(--theme-bg);
     color: var(--theme-text-color);
     transition: background-color 0.2s, color 0.2s;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 160px;
+    padding: 160px;
 }
 
 
