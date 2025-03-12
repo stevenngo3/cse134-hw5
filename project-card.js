@@ -30,6 +30,7 @@ class ProjectCard extends HTMLElement {
             }
 
         h2 {
+            color: black;
             margin: 0 0 8px;
             font-size: 1.5em;
             }
@@ -41,6 +42,7 @@ class ProjectCard extends HTMLElement {
 
         p {
             margin: 8px 0;
+            color: black;
             }
 
         a {
@@ -65,3 +67,46 @@ class ProjectCard extends HTMLElement {
 }
 
 customElements.define("project-card", ProjectCard);
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    const projectCards = document.querySelector(".project-cards");
+    const localButton = document.getElementById("localbutton");
+    const remoteButton = document.getElementById("remotebutton");
+
+    function populateCards(projects) {
+        projectCards.innerHTML = "";
+        projects.forEach((project) => {
+            const card = document.createElement("project-card");
+            card.setAttribute("title", project.title);
+            card.setAttribute("image-url", project.imgUrl);
+            card.setAttribute("description", project.description);
+            card.setAttribute("hyperlink", project.hyperlink);
+            card.setAttribute("link-text", project.linkText);
+            projectCards.appendChild(card);
+        });
+    }
+
+    localButton.addEventListener("click", (event) => {
+        const cachedData = localStorage.getItem("projectData");
+        if (cachedData) {
+            const projects = JSON.parse(cachedData);
+            populateCards(projects);
+        } else {
+            alert("No local data found, load remote data first");
+        }
+    });
+
+    remoteButton.addEventListener("click", (event) => {
+        fetch("https://raw.githubusercontent.com/stevenngo3/cse134-hw5/main/projects.json")
+        .then((response) => response.json())
+        .then((data) => {
+            localStorage.setItem("projectData", JSON.stringify(data));
+            populateCards(data);
+        }) 
+        .catch((error) => {
+            console.error("Error fetching project data:", error);
+            alert("Failed to load remote data");
+        });
+    });
+
+});
