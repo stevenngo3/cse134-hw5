@@ -51,6 +51,10 @@ header {
     font-size: var(--header-font-size, 1.1em);
 }
 
+#selfie {
+    border: 2px solid var(--theme-text-color);
+}
+
 nav {
     margin-left: auto;
 }
