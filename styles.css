@@ -60,6 +60,10 @@ header {
 
 #selfie {
     border: 2px solid var(--theme-text-color);
+    max-width: 100%;
+    height: auto;
+    float: none;
+    margin-right: 0;
 }
 
 nav {
@@ -138,8 +142,10 @@ span {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    width:500px;
+    width: 100%;
+    max-width: 500px;
     margin:0 auto;
+    padding: 0 15px;
 }
 
 #contactform input {
@@ -216,6 +222,60 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    @keyframes headertitleani {
+        0% {
+            transform: translateX(-50px); 
+            color: rgb(0, 255, 255);
+        }
+        50% {
+            transform: translateX(0);
+            color: rgb(240, 240, 13); 
+        }
+        100% {
+            transform: translateX(10px); 
+            color: #87C0C4; 
+        }
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: center; /* Center content */
+        text-align: center; /* Ensure text aligns properly */
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack list items */
+        align-items: center; /* Center items */
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Add spacing between items */
+    }
+
+    #contactform fieldset {
+        width: 90%; 
+        padding: 0 10px; 
+    }
+
+    #contactform input, #contactform textarea, #contactform button {
+        width: 100%;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+        padding: 10px; 
+    }
 }
 
 
